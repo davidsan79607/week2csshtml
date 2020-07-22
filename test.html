@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>my test code</title>
+        <style>
+            .classA { border-radius: 20%; width:200px; height:20px; }
+            .classB { box-shadow: grey 5px 5px 8px; height:200px; width:50px  }
+        </style>
+    </head>
+    <body onload='getStarted()' onclick='addShadow()'>
+        <h1 id='first'></h1>
+    </body>
+    <script>
+        let h1 = document.getElementById('first');
+        h1.innerText = 'Edge Tech';
+        h1.style.backgroundColor = 'lightblue';
+        h1.style.color = 'gray';
+        h1.className = 'classA';
+        let body = document.body;
+        body.style.backgroundColor = 'pink';
+
+        function addShadow() { 
+            if ( h1.classList.contains('classB'))
+                h1.classList.remove('classB');
+            else
+                h1.classList.add('classB');
+        }
+    </script>
+</html>
